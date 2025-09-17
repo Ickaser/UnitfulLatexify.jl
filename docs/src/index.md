@@ -6,7 +6,7 @@ pretty latexification of Unitful quantities, numbers and units.
 
 ## Deprecation
 
-As of Unitful.jl 1.25, UnitfulLatexify is superceded by an extension to Unitful.
+As of Unitful.jl 1.25, UnitfulLatexify is superseded by an extension to Unitful.
 Loading both Unitful and Latexify will automatically load this functionality.
 
 This package is now empty, to prevent errors caused by loading it at the same time as the Unitful extension.
