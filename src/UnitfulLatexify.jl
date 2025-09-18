@@ -2,7 +2,7 @@ module UnitfulLatexify
 
 import Unitful, Latexify
 
-if !isdefined(Base, :get_extension)
+@static if !isdefined(Base, :get_extension)
     unitfullatexifyext_fname = joinpath(dirname(dirname(pathof(Unitful))), "ext", "LatexifyExt.jl")
     include(unitfullatexifyext_fname)
 end
