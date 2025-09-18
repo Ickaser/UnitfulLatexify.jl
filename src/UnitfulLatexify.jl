@@ -2,18 +2,11 @@ module UnitfulLatexify
 
 import Unitful, Latexify
 
-@static if !isdefined(Base, :get_extension)
-    unitfullatexifyext_fname = joinpath(dirname(dirname(pathof(Unitful))), "ext", "LatexifyExt.jl")
-    include(unitfullatexifyext_fname)
-end
-
 function __init__()
     @warn """
         UnitfulLatexify is deprecated, and replaced with an extension on Unitful. 
 
         The package is now empty, to prevent errors caused by loading it at the same time as the Unitful extension.
-        (On Julia <v1.9, where the extension mechanism is not available, loading this package will instead
-         load the extension file.)
         
         ```
         using Unitful, Latexify
